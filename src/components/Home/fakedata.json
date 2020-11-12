@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Miriam Barron",
+        "work": "CEO,Manpol" ,
+        "quote":" Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit labore fugiat cupiditate eligendi...",
+        "img" : "https://rakib-ahmed22.imgbb.com/"
+    },
+    {
+        "name": "Miriam Barron",
+        "work": "CEO,Manpol" ,
+        "quote": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit labore fugiat cupiditate eligendi...",
+         "img": "https://rakib-ahmed22.imgbb.com/"
+    },
+    {
+        "name": "Bria Malone",
+        "work": "CEO,Manpol" ,
+        "quote": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit labore fugiat cupiditate eligendi...",
+        "img": "https://rakib-ahmed22.imgbb.com/"
+    }
+]
+
+ 

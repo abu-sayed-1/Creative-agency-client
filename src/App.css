@@ -1,0 +1,51 @@
+ 
+.btn_brand{
+  background-color: black;
+  color: white;
+  border: none;
+  outline: none !important;
+  border-radius: 4px;
+  line-height: 3rem;
+  width: 11rem;
+  font-size: 23px;
+}
+
+.text_brand{
+    font-size: 35px;
+}
+
+.text_brand_color{
+  color: #7AB259;
+}
+
+.home_btn_solid{
+    border-bottom: 4px green !important;
+    color: black;
+
+}
+
+.background_color{
+  background-color: #04f0f810;
+}
+
+.admin_btn{
+    position: relative;
+    width: 108px;
+    height: 40px;
+    color: white;
+    background: #009444;
+    border-radius: 5px;
+    border: none;
+    outline: none !important;
+}
+
+.navbar_item{
+  font-size: 20px;
+}
+
+/* admin and customer content */
+
+  .brand_content{
+    min-height: 43.8rem;
+    max-height: auto;
+  }
