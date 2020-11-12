@@ -15,8 +15,8 @@ import Feedback from './components/Dashboard/Customar/Feedback/Feedback';
 import AllServiceLists from './components/Dashboard/Admin/AllServiceLists/AllServiceLists';
 import AddService from './components/Dashboard/Admin/AddService/AddService';
 import MakeAdmin from './components/Dashboard/Admin/MakeAdmin/MakeAdmin';
-
 export const UserContext = createContext();
+
 function App() {
   const [loggedInUser, setLoggedInUser] = useState([]);
   const [admin, setAdmin] = useState(null); 
@@ -31,25 +31,25 @@ function App() {
             <Home />
           </Route>
           <Route path="/login">
-            <Login></Login>
+            <Login /> 
             </Route>
             <PrivateRoute path="/order">
-              <Order></Order>
+              <Order /> 
             </PrivateRoute>
             <Route path="/serviceLists">
-              <ServiceLists></ServiceLists>
+              <ServiceLists />
             </Route>
             <Route path="/feedback">
-              <Feedback></Feedback>
+              <Feedback />
             </Route>
             <Route path="/allServiceLists">
-              <AllServiceLists></AllServiceLists>
+              <AllServiceLists /> 
             </Route>
             <Route path="/addService">
-              <AddService></AddService>
+              <AddService /> 
             </Route>
             <Route path="/makeAdmin">
-               <MakeAdmin></MakeAdmin>
+               <MakeAdmin /> 
             </Route>
           <Route path="*">
             <PageNotFound />

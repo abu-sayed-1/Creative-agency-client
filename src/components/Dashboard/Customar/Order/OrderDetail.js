@@ -1,13 +1,11 @@
 import React from 'react';
-import { useContext } from 'react';
 import { useForm } from "react-hook-form";
-import { UserContext } from '../../../../App';
 
 const OrderDetail = () => {
-    const { register, handleSubmit, errors } = useForm();
-    const getEmail = sessionStorage.getItem("userEmail")
-    const onSubmit = (data) => {
-        const orderData = {
+  const { register, handleSubmit, errors } = useForm();
+  const getEmail = sessionStorage.getItem("userEmail") 
+  const onSubmit = (data) => {
+       const orderData = {
             name : data.name,
             price: data.price,
             profession: data.profession,
@@ -28,8 +26,8 @@ const OrderDetail = () => {
     };
 
     return (
-        <div className="mx-auto col-md-7 p-0 mt-5 pt-5 ">
-        <form onSubmit={handleSubmit(onSubmit)}>
+    <div className="mx-auto col-md-7 p-0 mt-5 pt-5 ">
+           <form onSubmit={handleSubmit(onSubmit)}>
                     <div className="form-group">
                        <input type="text" ref={register({ required: true, minLength: 5 })} name="userName" className="form-control p-4" placeholder="Your name / company's name" />
                        {errors.userName && <span className="text-danger">Your name/company's name is required and minimum Five character ^</span>}

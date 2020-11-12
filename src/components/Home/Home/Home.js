@@ -8,14 +8,14 @@ import Slider from "../Slider/Slider"
 
 const Home = () => {
     return (
-        <div>
-            <Header></Header>
-            <CompanyLogo></CompanyLogo>
-            <Services></Services>
-            <Slider /> 
-            <Review></Review>
-            <Contact></Contact>
-        </div>
+        <>
+         <Header /> 
+           <CompanyLogo /> 
+             <Services /> 
+               <Slider /> 
+                <Review /> 
+                  <Contact /> 
+        </>
     );
 };
 

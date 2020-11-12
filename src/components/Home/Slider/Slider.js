@@ -17,12 +17,11 @@ import "swiper/swiper-bundle.css";
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Autoplay]);
  const Slider = () => {
    return (
-      <section className="Slider_container">
-  
-          <div className="container">
-            <div className="my-5 py-5">
-            <h5 style={{color:'white'}} className="text_brand text-center">Here are some of <span className="text_brand_color">our works</span></h5>
-            </div>
+    <section className="Slider_container">
+       <div className="container">
+          <div className="my-5 py-5">
+             <h5 style={{color:'white'}} className="text_brand text-center">Here are some of <span className="text_brand_color">our works</span></h5>
+          </div>
        <Swiper
             spaceBetween={15}
             slidesPerView={3}
@@ -77,7 +76,7 @@ SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Autoplay]);
             </SwiperSlide>
           </Swiper>
      </div>
-      </section>
+  </section>
    );
  };
  

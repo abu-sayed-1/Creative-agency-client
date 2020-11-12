@@ -41,14 +41,14 @@ const Login = () => {
             });
     }
 
-    const storeAuthToken = () => {
-        firebase.auth().currentUser.getIdToken(/* forceRefreh */ true)
-        .then(function(idToken) {
-          sessionStorage.setItem('token', idToken)
-          history.replace(from)
-        }).catch(function(error) {
-        });
-      }
+            const storeAuthToken = () => {
+                firebase.auth().currentUser.getIdToken(/* forceRefreh */ true)
+                .then(function(idToken) {
+                sessionStorage.setItem('token', idToken)
+                history.replace(from)
+                }).catch(function(error) {
+                });
+            }
 
      
     return (

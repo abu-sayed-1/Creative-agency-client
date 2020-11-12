@@ -3,12 +3,11 @@ import HeaderMain from '../HeaderMain/HeaderMain';
 import Navbar from '../Navbar/Navbar';
 import "./header.css"
 
-
 const Header = () => {
     return (
         <div className="header_main" style={{height:'713px'}}>
-            <Navbar></Navbar>
-            <HeaderMain></HeaderMain>
+            <Navbar />
+            <HeaderMain /> 
         </div>
     );
 };

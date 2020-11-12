@@ -4,17 +4,15 @@ import Sidebar from '../../Shared/Sidebar/Sidebar';
 import OrderDetail from './OrderDetail';
 
 const Order = () => {
-    return (
-        <section>
-        <div>
-     <Header></Header>
-    </div>
+   return (
+      <section>
+          <Header /> 
         <div className="row m-0 p-0 ">
             <div  className="col-md-2  mx-0 px-0">
-                 <Sidebar></Sidebar>
+                <Sidebar /> 
             </div>
-            <div className="col-md-10 mx-0 background_color brand_content">
-                  <OrderDetail></OrderDetail>
+          <div className="col-md-10 mx-0 background_color brand_content">
+             <OrderDetail /> 
             </div>
         </div>
     </section>
