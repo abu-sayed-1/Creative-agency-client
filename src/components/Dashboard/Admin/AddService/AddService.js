@@ -6,7 +6,7 @@ import { useForm } from "react-hook-form";
 const AddService = () => {
 const { register, handleSubmit, errors } = useForm();
  const onSubmit = data => {
-    fetch('https://lit-hollows-73598.herokuapp.com/addServices',{
+    fetch('https://lit-hollows-73598.https://lit-hollows-73598.herokuapp.com/app.com/addServices',{
          method: 'POST',
          headers: { 'Content-type': 'application/json'},
          body: JSON.stringify(data)
@@ -14,9 +14,9 @@ const { register, handleSubmit, errors } = useForm();
        .then(res => {
          if (res) {
              alert('add Service successfully');
-            }
-        })
-     }
+            };
+        });
+     };
     return (
       <section>
          <Header /> 

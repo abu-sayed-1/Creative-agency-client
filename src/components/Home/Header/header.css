@@ -1,5 +1,9 @@
-.header_main{
-    background-image: linear-gradient(70deg,#FBD062,#FBD062);
+.header_main {
+    background-image: linear-gradient(70deg, #FBD062, #FBD062);
     clip-path: polygon(0 0, 100% 0, 100% 86%, 0 96%);
     height: 100%;
+}
+
+.header_main {
+    height: 713px;
 }

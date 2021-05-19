@@ -10,8 +10,6 @@ import "./Login.css"
 
 const Login = () => {
     const {admin, setAdmin,loggedInUser,setLoggedInUser} = useContext(UserContext);
-    console.log(admin,'admin')
-    
     const history = useHistory();
     const location = useLocation()
     let {from} = location.state || {form:{pathname:"/"}}
@@ -24,7 +22,7 @@ const Login = () => {
         firebase.auth().signInWithPopup(provider)
             .then(function (result) {
                 const { displayName, email } = result.user;
-                 const isSignedInUser = {
+                const isSignedInUser = {
                     name: displayName,
                     email: email,
                 }
@@ -33,13 +31,12 @@ const Login = () => {
                 storeAuthToken()
 
             }).catch(error => {
-                console.log(error.message)
                 let errorCode = error.code;
                 let errorMessage = error.message;
                 let email = error.email;
                 let credential = error.credential;
             });
-    }
+    };
 
             const storeAuthToken = () => {
                 firebase.auth().currentUser.getIdToken(/* forceRefreh */ true)
@@ -48,9 +45,8 @@ const Login = () => {
                 history.replace(from)
                 }).catch(function(error) {
                 });
-            }
+            };
 
-     
     return (
     <div className="main_container ">
             <div>

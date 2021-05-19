@@ -5,9 +5,9 @@ import "./header.css"
 
 const Header = () => {
     return (
-        <div className="header_main" style={{height:'713px'}}>
+        <div className="header_main">
             <Navbar />
-            <HeaderMain /> 
+            <HeaderMain />
         </div>
     );
 };

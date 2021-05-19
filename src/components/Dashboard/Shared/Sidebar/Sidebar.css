@@ -1,23 +1,22 @@
-
-.sidebar li{
+.sidebar li {
     margin-bottom: 2em;
     font-size: 18px;
     font-weight: 500;
 }
-.sidebar li:hover span{
+
+.sidebar li:hover span {
     display: inline-block;
     transform: translatey(-1px);
 }
-.sidebar svg{
+
+.sidebar svg {
     margin-right: 5px;
 }
-
-
 
 a {
     color: rgb(8, 8, 8);
 }
 
-a.active_class{
+a.active_class {
     color: #009444;
 }

@@ -7,16 +7,16 @@ import Services from '../Services/Services/Services';
 import Slider from "../Slider/Slider"
 
 const Home = () => {
-    return (
-        <>
-         <Header /> 
-           <CompanyLogo /> 
-             <Services /> 
-               <Slider /> 
-                <Review /> 
-                  <Contact /> 
-        </>
-    );
+  return (
+    <>
+      <Header />
+      <CompanyLogo />
+      <Services />
+      <Slider />
+      <Review />
+      <Contact />
+    </>
+  );
 };
 
 export default Home;

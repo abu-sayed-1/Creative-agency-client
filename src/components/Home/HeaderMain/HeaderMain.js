@@ -11,7 +11,7 @@ const HeaderMain = () => {
                     <button className="btn_brand"> Hire us</button>
                </div>
              <div className="col-md-6  ">
-             <img src={airbnb} alt="" className="img-fluid" />
+            <img src={airbnb} alt="" className="img-fluid" />
         </div>
       </div>
   </main>
