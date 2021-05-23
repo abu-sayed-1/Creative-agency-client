@@ -15,8 +15,8 @@ const Service = (props) => {
             <div
                 onClick={() => history.push("/order")}
                  className={`service_${background} py-4 cursor_pinter`}>
-                 <img style={{ height: '50px' }} src={img} alt="" />
-                 <h5 className="my-3">{serviceTitle}</h5>
+                    <img style={{ height: '50px' }} src={img} alt="" />
+                    <h5 className="my-3">{serviceTitle}</h5>
                 <p className="text-secondary mx-3 text-break">{description}</p>
             </div>
         </div>

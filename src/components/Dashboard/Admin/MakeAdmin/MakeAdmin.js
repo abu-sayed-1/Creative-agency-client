@@ -7,7 +7,7 @@ import { useForm } from "react-hook-form";
 const MakeAdmin = () => {
   const { register, handleSubmit, errors } = useForm();
   const onSubmit = (data) => {
-    fetch('https://lit-hollows-73598.herokuapp.com/makeAdmin', {
+    fetch('http://localhost:4000/makeAdmin', {
       method: 'POST',
       headers: { 'content-type': 'application/json' },
       body: JSON.stringify(data)
@@ -19,9 +19,9 @@ const MakeAdmin = () => {
       });
   };
   return (
-    <section onSubmit={handleSubmit(onSubmit)} className="container-fluid">
+    <section onSubmit={handleSubmit(onSubmit)}>
       <Header />
-      <div className="row">
+      <div className="row container-fluid">
         <div className="col-md-2  mx-0 px-0">
           <Sidebar />
         </div>

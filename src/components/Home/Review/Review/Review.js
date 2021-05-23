@@ -7,7 +7,7 @@ import { useState } from 'react';
 const Review = () => {
     const [reviewData, setReviewData] = useState([]);
     useEffect(() => {
-        fetch('https://lit-hollows-73598.herokuapp.com/feedbacksByData')
+        fetch('http://localhost:4000/feedbacksByData')
             .then(res => res.json())
             .then(data => setReviewData(data))
     }, []);
@@ -16,11 +16,16 @@ const Review = () => {
         <section className="review my-5 py-5">
             <div className="container-fluid">
                 <div className="text-center">
-                    <h5 className="text_brand" style={{ color: '#171B4E' }}>Clients <span className="text_brand_color">Feedback</span></h5>
+                    <h5 className="text_brand" style={{ color: '#171B4E' }}>Clients
+                      <span className="text_brand_color">Feedback</span>
+                    </h5>
                 </div>
-                <div className="mx-5 px5 row mt-5 pt-5">
+                <div className="mx-5 row mt-5 pt-5">
                     {
-                        reviewData.map(feedback => <ReviewInfo key={feedback._id} feedback={feedback} />)
+                        reviewData.map(feedback =>
+                            <ReviewInfo key={feedback._id}
+                                feedback={feedback}
+                            />)
                     }
                 </div>
             </div>

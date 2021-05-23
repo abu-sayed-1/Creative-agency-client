@@ -6,11 +6,13 @@ const Contact = () => {
     <section className="contact_container">
       <div className="container mt-5 pt-5">
         <div className="row">
-          <div className="col-md-6 text-center">
-            <h1><span className="mr-5 pr-1">Let us handle your </span> project,professionally.</h1>
-            <p className="mt-3 ">With well Written codes, we build amazing apps for  all <br /> <span className="mr-5 pr-4">platforms mobile and web apps in general</span></p>
+          <div className="col-sm-12 col-md-6">
+            <div>
+              <h1>Let us handle your project, <br /> professionally.</h1>
+              <p className="mt-3">With well Written codes, we build amazing apps for all platforms mobile and web apps in general</p>
+            </div>
           </div>
-          <div className="col-md-6">
+          <div className="col-sm-12 col-md-6">
             <ContactInfo />
           </div>
         </div>

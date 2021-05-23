@@ -5,9 +5,9 @@ import ServiceListDetail from './ServiceListDetail';
 
 const ServiceLists = () => {
     const [CustomersByData, setCustomersByData] = useState([]);
-    const getEmail = sessionStorage.getItem("userEmail")
+    const getEmail = JSON.parse(sessionStorage.getItem("userInfo"));
     useEffect(() => {
-        fetch('https://lit-hollows-73598.herokuapp.com/CustomersByData?email=' + getEmail, {
+        fetch('http://localhost:4000/CustomersByData?email=' + getEmail.email, {
             method: 'GET',
             headers: {
                 'Content-type': 'application/json',

@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 
 const OrderDetail = () => {
     const { register, handleSubmit, errors } = useForm();
-    const getEmail = sessionStorage.getItem("userEmail")
+    const getEmail = JSON.parse(sessionStorage.getItem("userInfo"));
     const onSubmit = (data) => {
         const orderData = {
             name: data.name,
@@ -11,9 +11,9 @@ const OrderDetail = () => {
             profession: data.profession,
             projectDetails: data.projectDetails,
             userName: data.userName,
-            email: getEmail
+            email: getEmail.email
         }
-        fetch('https://lit-hollows-73598.herokuapp.com/customerOrder', {
+        fetch('http://localhost:4000/customerOrder', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(orderData)
@@ -34,7 +34,7 @@ const OrderDetail = () => {
                 </div>
 
                 <div className="form-group">
-                    <input type="text" value={getEmail} ref={register({ required: true, pattern: /\S+@\S+\.\S+/ })} name="email" className="form-control p-4" placeholder="Your email address" />
+                    <input type="text" value={getEmail.email} ref={register({ required: true, pattern: /\S+@\S+\.\S+/ })} name="email" className="form-control p-4" placeholder="Your email address" />
                     {errors.email && <span className="text-danger">Email is required/YourName@gmil.com ^</span>}
                 </div>
 

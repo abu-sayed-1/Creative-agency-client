@@ -6,7 +6,7 @@ import { useForm } from "react-hook-form";
 const Feedback = () => {
     const { register, handleSubmit, errors } = useForm();
     const onSubmit = data => {
-        fetch('https://lit-hollows-73598.herokuapp.com/addFeedback', {
+        fetch('addFeedback', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data)
@@ -19,13 +19,13 @@ const Feedback = () => {
 
     };
     return (
-        <section className="container-fluid">
+        <section>
             <Header />
-            <div className="row">
+            <div className="row container-fluid">
                 <div className="col-md-2 p-0">
                     <Sidebar />
                 </div>
-                <div className="background_color brand_content mx-auto col-md-10 p-5">
+                <div className="background_color brand_content mx-auto col-md-10 p-md-5 pt-5">
                     <div>
                         <form className="col-md-6" onSubmit={handleSubmit(onSubmit)}>
                             <div className="form-group">

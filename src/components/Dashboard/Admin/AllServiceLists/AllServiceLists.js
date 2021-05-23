@@ -8,24 +8,22 @@ import AllServiceListsDetail from './AllServiceListsDetail';
 const AllServiceLists = () => {
     const [customerData, setCustomerData] = useState([]);
     useEffect(() => {
-        fetch('https://lit-hollows-73598.herokuapp.com/allCustomerData')
+        fetch('http://localhost:4000/allCustomerData')
             .then(res => res.json())
             .then(data => {
                 if (data) {
                     setCustomerData(data)
                 }
-                else{
+                else {
                     console.log("data loading now ....")
                 }
             })
     }, []);
 
     return (
-        <section className="container-fluid">
-            <div>
-                <Header />
-            </div>
-            <div style={{ height: '100%' }} className="row m-0 p-0">
+        <section>
+            <Header />
+            <div style={{ height: '100%' }} className="row m-0 p-0 container-fluid">
                 <div className="col-md-2 mx-0 px-0">
                     <Sidebar />
                 </div>
