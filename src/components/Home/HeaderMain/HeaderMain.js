@@ -1,6 +1,5 @@
 import React from 'react';
 import airbnb from '../../../images/images/logos/Frame.png'
-import "./HeaderMain.css"
 const HeaderMain = () => {
     return (
     <main className="header_main container-fluid align-items-center mt-5 pt-3 ">

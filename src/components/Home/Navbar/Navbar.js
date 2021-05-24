@@ -1,10 +1,19 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { NavLink } from 'react-router-dom';
+import { UserContext } from '../../../App';
 import brandLogo from "../../../images/images/logos/logo.png"
 
 const Navbar = () => {
+  const{ loggedInUser, setLoggedInUser } = useContext(UserContext);
+  const token = sessionStorage.getItem("token");
+  const handleLogOut = () => {
+    sessionStorage.removeItem("token");
+    setLoggedInUser("");
+    sessionStorage.removeItem("loginFirst")
+    window.location.reload(false);  
+    console.log("log out success")
+  }
     return (
-
        <div className="container-fluid px-5">
             <div className="px-5">
                <nav className="navbar navbar-expand-lg navbar-light">
@@ -27,7 +36,23 @@ const Navbar = () => {
                                     <NavLink className="nav-link mr-5 navbar_item" to="/">Contact Us</NavLink>
                                   </li>
                                   <li className="nav-item">
-                                    <NavLink  className="nav-link text-center btn_brand text-white" to="/login">Login</NavLink>
+                                    { 
+                                    (loggedInUser || token) ? 
+                                        <button onClick={() => handleLogOut()} className="nav-link 
+                                            text-center btn_brand 
+                                            text-white"
+                                          >
+                                            Log Out
+                                        </button>
+                                      : 
+                                        <NavLink className="nav-link text-center
+                                          btn_brand text-white"
+                                          onClick={ () => sessionStorage.setItem("loginFirst", true)}
+                                          to="/login"
+                                        >
+                                              Login
+                                        </NavLink>
+                                    }
                                     </li>
                                 </ul>
                             </div>

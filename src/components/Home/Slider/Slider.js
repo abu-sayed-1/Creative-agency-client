@@ -31,8 +31,6 @@ const Slider = () => {
             disableOnInteraction: false,
           }}
           loop={true}
-          // onSlideChange={() => console.log("slide change")}
-          // onSwiper={(swiper) => console.log(swiper)}
         >
           <SwiperSlide>
             <img

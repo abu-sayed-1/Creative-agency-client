@@ -6,7 +6,7 @@ import { useForm } from "react-hook-form";
 const Feedback = () => {
     const { register, handleSubmit, errors } = useForm();
     const onSubmit = data => {
-        fetch('addFeedback', {
+        fetch('http://localhost:4000/addFeedback', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data)
@@ -15,12 +15,11 @@ const Feedback = () => {
                 if (res) {
                     alert('Thank You For Your Feedback')
                 };
-            });
-
+          });
     };
     return (
         <section>
-            <Header />
+            <Header currentName="Review"/>
             <div className="row container-fluid">
                 <div className="col-md-2 p-0">
                     <Sidebar />

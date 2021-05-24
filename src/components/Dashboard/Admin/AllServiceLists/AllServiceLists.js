@@ -22,7 +22,7 @@ const AllServiceLists = () => {
 
     return (
         <section>
-            <Header />
+            <Header currentName="Services-List"/>
             <div style={{ height: '100%' }} className="row m-0 p-0 container-fluid">
                 <div className="col-md-2 mx-0 px-0">
                     <Sidebar />

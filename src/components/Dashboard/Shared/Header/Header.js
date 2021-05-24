@@ -5,12 +5,14 @@ import { NavLink } from 'react-router-dom';
 import { UserContext } from '../../../../App';
 import brandLogo from "../../../../images/images/logos/logo.png"
 
-const Header = () => {
+const Header = (currentName) => {
+    console.log()
     const { loggedInUser, setLoggedInUser } = useContext(UserContext);
     const userInfo = JSON.parse(sessionStorage.getItem("userInfo"));
     const handleLogOut = () => {
         sessionStorage.removeItem("token");
         setLoggedInUser("");
+        sessionStorage.removeItem("loginFirst");
         window.location.reload(false);
     };
     return (
@@ -21,6 +23,9 @@ const Header = () => {
                     <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                    <h5 className="mb-0 ml-5">
+                        {currentName && currentName.currentName}
+                    </h5>
                     <ul className="navbar-nav ml-auto">
                         <li className="nav-item active">
                             <div className="btn-group dropleft">

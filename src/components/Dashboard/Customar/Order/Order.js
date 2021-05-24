@@ -6,7 +6,7 @@ import OrderDetail from './OrderDetail';
 const Order = () => {
    return (
       <section>
-          <Header /> 
+          <Header currentName="Order"/> 
         <div className="row m-0 p-0 ">
             <div  className="col-md-2  mx-0 px-0">
                 <Sidebar /> 
