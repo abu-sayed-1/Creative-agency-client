@@ -7,7 +7,7 @@ import { useState } from 'react';
 const Review = () => {
     const [reviewData, setReviewData] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:4000/feedbacksByData')
+        fetch('https://creative-agency-fdt69.herokuapp.com/feedbacksByData')
             .then(res => res.json())
             .then(data => setReviewData(data))
     }, []);

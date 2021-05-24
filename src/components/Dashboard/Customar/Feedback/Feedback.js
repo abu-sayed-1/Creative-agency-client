@@ -6,7 +6,7 @@ import { useForm } from "react-hook-form";
 const Feedback = () => {
     const { register, handleSubmit, errors } = useForm();
     const onSubmit = data => {
-        fetch('http://localhost:4000/addFeedback', {
+        fetch('https://creative-agency-fdt69.herokuapp.com/addFeedback', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data)

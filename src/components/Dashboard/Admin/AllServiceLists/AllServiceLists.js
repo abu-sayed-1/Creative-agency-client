@@ -8,7 +8,7 @@ import AllServiceListsDetail from './AllServiceListsDetail';
 const AllServiceLists = () => {
     const [customerData, setCustomerData] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:4000/allCustomerData')
+        fetch('https://creative-agency-fdt69.herokuapp.com/allCustomerData')
             .then(res => res.json())
             .then(data => {
                 if (data) {

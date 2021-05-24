@@ -13,7 +13,7 @@ const OrderDetail = () => {
             userName: data.userName,
             email: getEmail.email
         }
-        fetch('http://localhost:4000/customerOrder', {
+        fetch('https://creative-agency-fdt69.herokuapp.com/customerOrder', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(orderData)

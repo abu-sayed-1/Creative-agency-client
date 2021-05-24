@@ -27,7 +27,7 @@ const Login = () => {
                 sessionStorage.setItem("userInfo", JSON.stringify(isSignedInUser));
                 setLoggedInUser(isSignedInUser.email)
                 storeAuthToken();
-                fetch(`http://localhost:4000/checkAdminEmailOrNot?email=${isSignedInUser.email}`)
+                fetch(`https://creative-agency-fdt69.herokuapp.com/checkAdminEmailOrNot?email=${isSignedInUser.email}`)
                     .then((res) => res.json())
                     .then((data) => {
                         sessionStorage.setItem("isAdmin", data.admin);
