@@ -14,9 +14,9 @@
 }
 
 a {
-    color: rgb(8, 8, 8);
+    color: rgb(8, 8, 8) !important;
 }
 
 a.active_class {
-    color: #009444;
+    color: #009444 !important; 
 }
